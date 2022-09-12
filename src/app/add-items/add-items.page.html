@@ -1,0 +1,158 @@
+<ion-header class="bg_transparent">
+	<ion-toolbar [class.show-background]="showToolbar">
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+	<div class="banner">
+		<div class="img_box center_img">
+<!--			<img src="assets/imgs/img_restro.png" class="crop_img">-->
+		</div>
+		<div class="text animate__animated_no animate__zoomIn_no">
+			<ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+			<h2>{{"upload_items_image" | translate}}</h2>
+			<p>({{"ratio_should_be" | translate}})</p>
+
+		</div>
+	</div>
+
+	<ion-list lines="none">
+		<ion-card>
+			<div class="form">
+				<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+					<ion-label mode="md" position="floating">{{"item_name" | translate}}</ion-label>
+					<ion-input mode="md" type="name"></ion-input>
+				</ion-item>
+
+				<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+					<ion-label mode="md" position="floating">{{"choose_item_category" | translate}}</ion-label>
+					<ion-select class="end" mode="md" interface="popover">
+						<ion-select-option value="0">Veg Food</ion-select-option>
+						<ion-select-option value="1">Non-Veg Food</ion-select-option>
+					</ion-select>
+				</ion-item>
+
+				<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+					<ion-label mode="md" position="floating">{{"short_desription" | translate}}</ion-label>
+					<ion-input mode="md" type="text"></ion-input>
+				</ion-item>
+
+
+				<ion-row class="ion-justify-content-end">
+					<ion-col size="6">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"inr_price" | translate}}</ion-label>
+							<ion-input mode="md" type="number"></ion-input>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="6" class="d-flex">
+						<ion-item lines="none" class="item_status end">
+							<div class="item_inner">
+								<h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+								<ion-toggle></ion-toggle>
+							</div>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-card>
+
+		<ion-card class="specifications">
+			<div class="form">
+				<h2>{{"add_specifications_optional" | translate}}</h2>
+				<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+					<ion-label mode="md" position="floating">{{"add_title" | translate}} <sub>(i.e Extra toppings, size, etc.)</sub></ion-label>
+					<ion-input mode="md" type="text"></ion-input>
+				</ion-item>
+
+				<ion-row>
+					<ion-col size="7">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"option" | translate}} 1</ion-label>
+							<ion-input mode="md" type="name"></ion-input>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="5">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"inr_price" | translate}}</ion-label>
+							<ion-input mode="md" type="number"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col size="7">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"option" | translate}} 2</ion-label>
+							<ion-input mode="md" type="name"></ion-input>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="5">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"inr_price" | translate}}</ion-label>
+							<ion-input mode="md" type="number"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col size="7">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"option" | translate}} 3</ion-label>
+							<ion-input mode="md" type="name"></ion-input>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="5">
+						<ion-item class="animate__animated_no animate__fadeInUp_no" lines="none">
+							<ion-label mode="md" position="floating">{{"inr_price" | translate}}</ion-label>
+							<ion-input mode="md" type="number"></ion-input>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+
+				<h4>+ {{"more_options" | translate}}</h4>
+			</div>
+		</ion-card>
+
+		<ion-card class="customer_can_choose">
+			<div class="form">
+				<h2>{{"customer_can_choose" | translate}}</h2>
+				<ion-radio-group>
+					<ion-row>
+						<ion-col class="animate__animated_no animate__fadeInUp_no" size="6">
+							<ion-item>
+								<div class="item_inner d-flex">
+									<ion-radio value="0"></ion-radio>
+									<ion-label>{{"only_one_option" | translate}}</ion-label>
+								</div>
+							</ion-item>
+						</ion-col>
+						<ion-col class="animate__animated_no animate__fadeInUp_no" size="6">
+							<ion-item>
+								<div class="item_inner d-flex">
+									<ion-radio value="1"></ion-radio>
+									<ion-label> {{"Multiple option" | translate}}</ion-label>
+								</div>
+							</ion-item>
+						</ion-col>
+					</ion-row>
+				</ion-radio-group>
+			</div>
+
+			<div class="add_more_specifications">
+				<h2>{{"add_more_specifications" | translate}}</h2>
+			</div>
+		</ion-card>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated_no animate__fadeInUp_no">
+	<ion-button size="large" shape="full" class="btn">{{'add_item' | translate}}</ion-button>
+</ion-footer>

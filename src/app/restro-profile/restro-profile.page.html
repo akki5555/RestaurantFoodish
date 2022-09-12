@@ -1,0 +1,160 @@
+<ion-header class="bg_transparent">
+	<ion-toolbar [class.show-background]="showToolbar">
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<div class="title_inner d-flex">
+				<h4 class="end">
+					<span>{{"change_image" | translate}}</span>
+					<ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+				</h4>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+	<div class="banner">
+		<div class="banner_img center_img">
+			<img src="assets/imgs/img_restro.png" class="crop_img">
+		</div>
+	</div>
+
+	<ion-list lines="none">
+		<ion-card class="d-flex animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+			</h3>
+
+			<div class="form">
+				<h2 class="d-flex">{{"restro_details" | translate}}
+					<span class="end" (click)="signin()">{{"logout_title" | translate}}</span>
+				</h2>
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"restaurant_identity" | translate}}</ion-label>
+					<ion-input mode="md" type="name" value="Global China Restro"></ion-input>
+				</ion-item>
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"registered_email_address" | translate}}</ion-label>
+					<ion-input mode="md" type="email" value="globalchinarestro@mail.com"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"phone_number" | translate}}</ion-label>
+					<ion-input mode="md" type="text" value="+1 987 654 3210"></ion-input>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card class="d-flex restaurant_address animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+			</h3>
+
+			<div class="form">
+				<h2 class="d-flex">{{"restaurant_address" | translate}}
+					<span class="end" (click)="add_address()">{{"change" | translate}}</span>
+				</h2>
+
+				<p>104, Adin Park, Opp HSBC Bank, Old golden street, Washington DC, USA.</p>
+			</div>
+		</ion-card>
+
+		<ion-card class="d-flex animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+			</h3>
+
+			<div class="form">
+				<h2 class="d-flex">{{"restaurant_working_hours" | translate}}
+				</h2>
+				<ion-row>
+					<ion-col size="6">
+						<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+							<ion-label mode="md" position="floating">{{"ppening_time" | translate}}</ion-label>
+							<ion-datetime mode="md" displayFormat="h:mm A" value="08:00"></ion-datetime>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="6">
+						<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+							<ion-label mode="md" position="floating">{{"closing_time" | translate}}</ion-label>
+							<ion-datetime mode="md" displayFormat="h:mm A" value="12:00"></ion-datetime>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+
+			</div>
+		</ion-card>
+
+		<ion-card class="d-flex pre_order_available animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-timer ion-text-start"></ion-icon>
+			</h3>
+			<div class="form">
+				<h2 class="d-flex">{{"pre_order_available" | translate}}
+					<ion-toggle checked class="end"></ion-toggle>
+				</h2>
+				<p>When you enable, user can choose date & time to order</p>
+			</div>
+		</ion-card>
+
+		<ion-card class="d-flex animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+			</h3>
+
+			<div class="form">
+				<h2 class="d-flex">{{"delivery_options" | translate}}
+				</h2>
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"delivery_time_in_minutes" | translate}}</ion-label>
+					<ion-input mode="md" type="text" value="30-40 mins"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"minimum_order_in_$" | translate}}</ion-label>
+					<ion-input mode="md" type="text" value="$50.00"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+					<ion-label mode="md" position="floating">{{"delivery_fee_in_$" | translate}}</ion-label>
+					<ion-input mode="md" type="text" value="$2.00"></ion-input>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card class="d-flex payment_methods animate__animated_no animate__fadeInUp_no">
+			<h3>
+				<ion-icon class="zmdi zmdi-card ion-text-start"></ion-icon>
+			</h3>
+			<div class="form">
+				<h2 class="d-flex">{{"payment_methods" | translate}} </h2>
+				<ion-row>
+					<ion-col size="5">
+						<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+							<div class="item_inner d-flex">
+								<ion-checkbox checked="true"></ion-checkbox>
+								<h3>{{"online" | translate}}</h3>
+							</div>
+						</ion-item>
+					</ion-col>
+
+					<ion-col size="7">
+						<ion-item lines="none" class="animate__animated_no animate__fadeInUp_no">
+							<div class="item_inner d-flex">
+								<ion-checkbox></ion-checkbox>
+								<h3>{{"cod" | translate}}</h3>
+							</div>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-card>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated_no animate__fadeInUp_no">
+	<ion-button size="large" shape="full" class="btn">{{'update_info' | translate}}</ion-button>
+</ion-footer>

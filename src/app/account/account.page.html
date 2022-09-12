@@ -1,0 +1,85 @@
+
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <div class="banner">
+        <div class="banner_img center_img">
+            <img src="assets/imgs/img_restro.png" class="crop_img">
+        </div>
+        <div class="details" (click)="profile()">
+            <h2 class="animate__animated_no animate__fadeInUp_no">Global China Restro</h2>
+            <h3 class="d-flex animate__animated_no animate__fadeInUp_no">{{"view_restro_profile" | translate}}
+                <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+            </h3>
+        </div>
+    </div>
+    <div class="buy_this_app" *ngIf="config.demoMode" (click)="buyappalert()">
+        <h2>
+            <!-- <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon> -->
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated_no animate__fadeInUp_no" (click)="review()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-thumb-up ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{"reviews" | translate}}
+                        <ion-badge class="end">4.5</ion-badge>
+                    </h2>
+                    <p class="d-flex">{{"read_all_reviews_about_restro" | translate}}<span class="end">1145 rated</span></p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated_no animate__fadeInUp_no" (click)="earnings()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-balance-wallet ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h2>{{"wallet" | translate}}</h2>
+                    <p>{{"view_order_money_transactions" | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated_no animate__fadeInUp_no" (click)="select_language()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-globe ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h2>{{"languges" | translate}}</h2>
+                    <p>{{"select_preferred_language" | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated_no animate__fadeInUp_no" (click)="support()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h2>{{"support" | translate}}</h2>
+                    <p>{{"let_us_know_your_queries_fedback" | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated_no animate__fadeInUp_no">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-share ion-text-start"></ion-icon>
+                <div class="text_box">
+                    <h2>{{"share_app" | translate}}</h2>
+                    <p>{{"share_store_app_friends_family" | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border" *ngIf="config.demoMode">
+    <div class="developed_by d-flex" (click)="developed_by()">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box  end">
+            <img src="assets/imgs/Opus.png">
+        </div>
+    </div>
+</ion-footer>

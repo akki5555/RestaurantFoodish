@@ -1,0 +1,90 @@
+ion-header { 
+	ion-toolbar {
+		ion-title ion-icon {
+			color: var(--text-light)
+		}
+	}
+} 
+
+.map {
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+ 	overflow: hidden;
+ 	top: 0;
+ }
+
+ .to,
+ .from {
+ 	position: absolute;
+ 	z-index: 999;
+
+ 	ion-icon {
+ 		color: var(--orange-color);
+ 		font-size: 2rem;
+ 	}
+ }
+
+ .to {
+ 	ion-icon {
+ 		color: var(--success);
+ 	}
+ }
+
+ .deliveryman_location {
+ 	position: absolute;
+ 	z-index: 999;
+
+ 	img {
+ 		width: 16px;
+ 	}
+
+ }
+
+ ion-footer {
+ 	background: var(--bg-color2);
+ 	position: relative;
+ 	z-index: 9999;
+
+ 	.info {
+ 		padding: 25px 20px 20px 20px;
+ 		p {
+ 			color: var(--text-light2);
+ 			margin: 0;
+ 			font-size: 0.75rem;
+ 			font-weight: 400;
+ 			margin-bottom: 7px;
+ 		}
+
+ 		h2 {
+ 			color: var(--text-light);
+ 			margin: 0;
+ 			font-size: 1rem;
+ 			font-weight: 500;
+ 			letter-spacing: 0.5px;
+ 		}
+ 	}
+
+ }
+
+ ion-row {
+ 	ion-col {
+		padding: 0;
+ 		ion-button.btn {
+ 			font-size: .9rem;
+ 			font-weight: 400;
+ 			letter-spacing: 0.0px !important;
+
+ 			ion-icon {
+ 				font-size: 1.1rem;
+ 				min-width: 25px;
+ 			}
+
+ 			&.call_now {
+ 				--background: var(--white) !important;
+ 				color: var(--primary) !important;
+ 				font-weight: 500;
+ 			}
+ 		}
+ 	}
+ }

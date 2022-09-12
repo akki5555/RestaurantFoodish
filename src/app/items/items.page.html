@@ -1,0 +1,1203 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{"items" | translate}}
+                <ion-icon class="zmdi zmdi-search end ion-text-end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <ion-row>
+        <ion-col size="6">
+            <ion-segment mode="md" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+                <ion-segment-button mode="md" value="0">
+                    <ion-label>
+                        {{'approved_items' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+                <ion-segment-button mode="md" value="1">
+                    <ion-label>
+                        {{'pending_items' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-col>
+        <ion-col size="6" class="d-flex">
+            <ion-select class="end" mode="md" interface="popover" [(ngModel)]="select_item">
+                <ion-select-option value="1">All Items</ion-select-option>
+                <ion-select-option value="2">Past Items</ion-select-option>
+                <ion-select-option value="3">New Items </ion-select-option>
+            </ion-select>
+        </ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="tab_container">
+        <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status end">
+                                        <h4 class="end">{{"available?" | translate}} </h4>&nbsp;&nbsp;
+                                        <ion-toggle checked="true"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f5.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Cheese Onion Burger</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Chicken Curry</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f3.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Dal Makhni</h2>
+                                <p>Indian Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated_no animate__slideInUp_no">
+                        <div class="item_inner d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/imgs/f7.png" class="crop_img">
+                            </div>
+                            <div class="details_box">
+                                <h2>Mexican Pizza</h2>
+                                <p>Fast Food</p>
+                                <div class="other_details d-flex">
+                                    <h3 class="d-flex"> ₹40.00 </h3>
+                                    <div class="item_status d-flex">
+                                        <h4 class="end">{{"pending" | translate}} </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <ion-fab class="animate__animated_no animate__zoomIn" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="add_items()">
+            <span>+</span>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

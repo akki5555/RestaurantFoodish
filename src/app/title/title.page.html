@@ -1,0 +1,23 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>title</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+<ion-content (click)="dismiss()">
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item class="address animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                    <p>104, Adin Park, Opp HSBC Bank, Old golden street, Washington DC, USA.</p>
+                </div>
+            </ion-item>
+            <ion-button size="large" shape="full" class="btn animate__animated animate__fadeInUp" (click)="dismiss()">{{'save_address' | translate}}</ion-button>
+        </ion-list>
+    </div>
+</ion-footer>

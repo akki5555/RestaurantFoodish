@@ -1,0 +1,114 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                &nbsp;
+                <ion-icon class="zmdi zmdi-more-vert end ion-text-end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <div class="banner">
+        <h2 class="animate__animated_no animate__slideInUp_no">{{"order" | translate}} #221453</h2>
+        <h3 class="animate__animated_no animate__slideInUp_no">{{"ordered_on" | translate}} 30 June, 2018 | 12:25 pm</h3>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color2" fullscreen>
+    <ion-card>
+        <ion-row class="animate__animated_no animate__slideInUp_no">
+            <ion-col size="7">
+                <h2>{{"ordered_items" | translate}}</h2>
+            </ion-col>
+            <ion-col size="2" class="ion-text-center">
+                <h4>{{"qnt" | translate}}</h4>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+                <h4>{{"amount" | translate}}</h4>
+            </ion-col>
+        </ion-row>
+        <div class="items_details animate__animated_no animate__slideInUp_no">
+            <ion-row class="animate__animated_no animate__slideInUp_no">
+                <ion-col size="7" class="d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/sign in.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3>Dal Makhini</h3>
+                        <p>Etra toppings <br>Cheese</p>
+                    </div>
+                </ion-col>
+                <ion-col size="2" class="ion-text-center">
+                    <h3><strong>1</strong></h3>
+                </ion-col>
+                <ion-col size="3" class="ion-text-end">
+                    <h3><strong>₹ 30.00</strong></h3>
+                </ion-col>
+            </ion-row>
+            <ion-row class="animate__animated_no animate__slideInUp_no">
+                <ion-col size="7" class="d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h3>Red Thai Curry</h3>
+                        <p>No specila Instruction</p>
+                    </div>
+                </ion-col>
+                <ion-col size="2" class="ion-text-center">
+                    <h3><strong>1</strong></h3>
+                </ion-col>
+                <ion-col size="3" class="ion-text-end">
+                    <h3><strong>₹ 45.00</strong></h3>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <ion-row class="payment_details animate__animated_no animate__slideInUp_no">
+            <ion-col col-9 class="ion-text-end">
+                <h4>{{"total_amount" | translate}}</h4>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+                <h3><strong>₹ 75.00</strong></h3>
+            </ion-col>
+        </ion-row>
+        <ion-row class="payment_details animate__animated_no animate__slideInUp_no">
+            <ion-col col-9 class="ion-text-end">
+                <h4>{{"text" | translate}}</h4>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+                <h3><strong>₹ 05.00</strong></h3>
+            </ion-col>
+        </ion-row>
+        <ion-row class="grand_total animate__animated_no animate__slideInUp_no">
+            <ion-col col-9 class="ion-text-end">
+                <h3>{{"paid_via" | translate}} Credit Card</h3>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+                <h3><strong>₹ 80.00</strong></h3>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated_no animate__slideInUp_no">
+    <div class="details">
+        <ion-row>
+            <ion-col size="6" (click)="chat()">
+                <p>{{"ordered_by" | translate}} </p>
+                <h2>Sam Smith </h2>
+                <h3>{{"message_now" | translate}}</h3>
+            </ion-col>
+
+            <ion-col size="6" class="ion-text-end deliveryman_info active" (click)="deliveryman_info()">
+                <p>{{"deliveryman_assigned" | translate}} </p>
+                <h2>David Anderson</h2>
+                <h3>{{"view_info" | translate}}</h3>
+                <!--				<h3>{{"accept_order_to_assign" | translate}}</h3>-->
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-button size="large" shape="full" class="btn">{{'order_redy_to_delibered' | translate}}</ion-button>
+</ion-footer>
